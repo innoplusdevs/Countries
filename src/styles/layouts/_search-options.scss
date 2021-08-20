@@ -1,0 +1,124 @@
+.SearchOptions {
+  @include flexCenter("row");
+  margin: 2rem;
+  padding: 1rem;
+
+  &__Form {
+    position: relative;
+    width: 30%;
+
+    input {
+      font-size: 1rem;
+      width: 100%;
+      padding: 0.7rem 3.5rem;
+      padding-right: 0.5rem;
+      border: none;
+      @include rounded("normal");
+      @include shadow();
+      outline: none;
+
+      &::placeholder {
+        color: rgb(192, 187, 187);
+        font-size: 0.8rem;
+      }
+    }
+
+    &__SearchIcon {
+      color: gray;
+      position: absolute;
+      left: 0.5rem;
+      top: 0;
+      transform: translate(10px, 50%);
+    }
+  }
+
+  &__Filter {
+    padding: 0.7rem;
+    border: none;
+    outline: none;
+    @include rounded("normal");
+    @include shadow();
+  }
+}
+
+.options {
+  padding: 0;
+  width: 100%;
+  transition: height 1s ease;
+  position: absolute;
+  @include flexCenter("column");
+  justify-content: center;
+  @include rounded("normal");
+  @include shadow();
+
+  &.open {
+    animation: slide-down 0.4s ease-out;
+  }
+
+  &.close {
+    animation: slide-up 0.4s ease-out;
+  }
+
+  &__item {
+    text-align: center;
+    font-size: 0.8rem;
+    color: lighten($color-text-primary, $amount: 30);
+    width: 100%;
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 0.15em 0;
+    @include rounded("normal");
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-background-dark;
+      color: white;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.accordion {
+  position: relative;
+
+  &--hide {
+    display: none;
+  }
+
+  &__button {
+    font-size: 0.8rem;
+    color: lighten($color-text-primary, $amount: 30);
+    background: none;
+    border: none;
+    padding: 0.7rem;
+    padding-right: 2rem;
+    cursor: pointer;
+    @include rounded("normal");
+    @include shadow();
+
+    &.open{
+      color: $color-background-dark;
+    }
+  }
+
+  &__arrow {
+    border-bottom: 2.5px solid $color-text-secondary;
+    border-right: 2.5px solid $color-text-secondary;
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    top: 8px;
+    right: 7px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    transform: translateY(50%) rotate(45deg);
+
+    &.open {
+      border-color: $color-background-dark;
+      top: 17px;
+      transform: rotate(225deg);
+    }
+  }
+}

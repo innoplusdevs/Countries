@@ -1,12 +1,17 @@
 .Header {
+  background-color: $color-background-light;
   @include flexCenter("row");
   margin: 0;
-  padding: 0 2rem;
+  padding: 0 3rem;
+  box-shadow: 0 1px 10px 1px rgba(#000000, 0.2);
 }
 
-.Theme__select {
+.ThemeSelect {
   @include flexCenter("row");
-  // margin-right: 1rem;
+  
+  &__icon{
+    padding: 0.5rem;
+  }
 
   &__name{
     margin-left: 1rem;

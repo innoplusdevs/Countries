@@ -17,3 +17,21 @@
     justify-content: space-between;
   }
 }
+
+@mixin shadow {
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.1);
+}
+
+@mixin rounded($size) {
+  @if $size == "full" {
+    border-radius: 50%;
+  }
+
+  @if $size == "high" {
+    border-radius: 25px;
+  }
+
+  @if $size == "normal" {
+    border-radius: 5px;
+  }
+}

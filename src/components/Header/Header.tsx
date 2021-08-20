@@ -7,9 +7,9 @@ export const Header = () => {
   return (
     <header className="Header">
       <h3>Where in the world?</h3>
-      <div className="Theme__select">
-          <img className="Theme__select__icon" src={light_mode}  alt="theme"/>
-          <p className="Theme_select__name">Light Mode</p>
+      <div className="ThemeSelect">
+          <img className="ThemeSelect__icon" src={light_mode}  alt="theme"/>
+          <p className="ThemSelect__name">Light Mode</p>
       </div>
     </header>
   )
