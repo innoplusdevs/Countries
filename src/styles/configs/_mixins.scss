@@ -1,0 +1,19 @@
+@mixin noneSpacing() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flexCenter($orientation) {
+  @if $orientation == "column" {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  @if $orientation == "row" {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

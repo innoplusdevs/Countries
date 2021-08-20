@@ -1,0 +1,14 @@
+.Header {
+  @include flexCenter("row");
+  margin: 0;
+  padding: 0 2rem;
+}
+
+.Theme__select {
+  @include flexCenter("row");
+  // margin-right: 1rem;
+
+  &__name{
+    margin-left: 1rem;
+  }
+}
