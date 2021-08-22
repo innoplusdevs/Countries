@@ -36,17 +36,17 @@
   }
 }
 
-@mixin gridTemplate($resolution) {
-  @if $resolution == "desktop" {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 27vw));
-    grid-gap: 3rem;
-    justify-content: center;
+@mixin gridTemplate() {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 25vw));
+  grid-gap: 3rem;
+  justify-content: center;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(3, minmax(100px, 25vw));
   }
 
-  @if $resolution == "mobile" {
-    display: grid;
-    grid-template-columns: 1;
-    justify-content: center;
+  @media screen and (max-width: 425px) {
+    grid-template-columns: repeat(1, minmax(150px, 80%));
   }
 }

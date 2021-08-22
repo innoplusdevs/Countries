@@ -15,7 +15,7 @@ export const CountriesList = () => {
 
   const showMore = (e, name) => {
     e.preventDefault();
-    history.push(`country/${name}`);
+    history.push(`country/?q=${name}`);
   }
 
   return (

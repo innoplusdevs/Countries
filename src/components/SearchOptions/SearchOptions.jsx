@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { useHistory, useLocation } from "react-router-dom";
-import queryString from "query-string";
 import { useForm } from "../../hooks/useForm";
-import { accordion } from "../../helpers/animations/accordion";
 
+import queryString from "query-string";
 import { SearchContext } from "./SearchContext";
+
+import { accordion } from "../../helpers/animations/accordion";
 import { types } from "../../types/types";
 
 import searchIcon from "../../assets/icons/search.svg";

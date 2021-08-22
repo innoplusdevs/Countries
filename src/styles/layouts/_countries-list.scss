@@ -1,5 +1,5 @@
 .CountriesList {
-  @include gridTemplate("desktop");
+  @include gridTemplate();
   padding: 1rem;
   margin: 1rem;
   position: relative;
@@ -14,8 +14,8 @@
     cursor: pointer;
     transition: all 0.5s ease;
 
-    &:hover{
-      .CountriesList__Item__show-more{
+    &:hover {
+      .CountriesList__Item__show-more {
         display: flex;
       }
     }
@@ -52,7 +52,7 @@
       p {
         margin: 0.2rem;
 
-        span{
+        span {
           font-weight: bold;
         }
       }
@@ -69,7 +69,7 @@
       right: 0;
       bottom: 0;
       top: 0;
-      @include rounded('normal');
+      @include rounded("normal");
       display: none;
       align-items: center;
       justify-content: center;
@@ -82,4 +82,10 @@
   font-weight: bold;
   padding: 0.5rem;
   top: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .CountriesList__Item__image {
+    height: 30vw;
+  }
 }
