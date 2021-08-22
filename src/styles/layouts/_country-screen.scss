@@ -34,11 +34,11 @@
   &__image {
     width: 100%;
     @include shadow();
-    @include rounded('normal');
+    @include rounded("normal");
 
     img {
       width: 100%;
-      @include rounded('normal');
+      @include rounded("normal");
     }
   }
 
@@ -96,4 +96,24 @@
 
 span {
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .Country__grid {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Country__name {
+    margin-top: 1rem;
+  }
+
+  .Country__Description {
+    display: inline-block;
+  }
+
+  .Country__Description__col-2{
+    margin-top: 2rem;
+  }
 }

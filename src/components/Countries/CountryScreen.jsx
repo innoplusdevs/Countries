@@ -47,7 +47,7 @@ export const CountryScreen = () => {
               </div>
               <div className='Country__Description'>
                 <h4 className='Country__name'>{data[0].name}</h4>
-                <div>
+                <div className="Country__Description__col-1">
                   <p className='Country__Description__nativeName'>
                     <span>Native Name:</span> {data[0].nativeName}
                   </p>
@@ -65,7 +65,7 @@ export const CountryScreen = () => {
                     <span>Capital:</span> {data[0].capital}
                   </p>
                 </div>
-                <div>
+                <div className="Country__Description__col-2">
                   <p className='Country__Description__topLevelDomain'>
                     <span>Top Level Domain:</span> {data[0].topLevelDomain}
                   </p>
