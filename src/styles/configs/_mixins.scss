@@ -35,3 +35,18 @@
     border-radius: 5px;
   }
 }
+
+@mixin gridTemplate($resolution) {
+  @if $resolution == "desktop" {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 27vw));
+    grid-gap: 3rem;
+    justify-content: center;
+  }
+
+  @if $resolution == "mobile" {
+    display: grid;
+    grid-template-columns: 1;
+    justify-content: center;
+  }
+}

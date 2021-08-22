@@ -1,0 +1,85 @@
+.CountriesList {
+  @include gridTemplate("desktop");
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+  z-index: 1;
+
+  &__Item {
+    @include flexCenter("column");
+    align-items: flex-start;
+    justify-content: stretch;
+    @include rounded("normal");
+    @include shadow();
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover{
+      .CountriesList__Item__show-more{
+        display: flex;
+      }
+    }
+
+    &__image {
+      text-align: center;
+      width: 100%;
+      height: 15vw;
+      margin: 0;
+      margin-bottom: 10px;
+      @include rounded("normal");
+      @include shadow();
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        @include rounded("normal");
+      }
+    }
+
+    &__Description {
+      padding: 1rem;
+      @include flexCenter("column");
+      align-items: flex-start;
+
+      &__name {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin: 0.2rem;
+
+        span{
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__show-more {
+      text-align: center;
+      color: white;
+      font-size: x-large;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      @include rounded('normal');
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.Loading,
+.CountryNotFound {
+  font-weight: bold;
+  padding: 0.5rem;
+  top: 0;
+}

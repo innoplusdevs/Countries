@@ -42,6 +42,7 @@
 }
 
 .options {
+  background-color: $color-white;
   padding: 0;
   width: 100%;
   transition: height 1s ease;
@@ -50,6 +51,7 @@
   justify-content: center;
   @include rounded("normal");
   @include shadow();
+  outline: none;
 
   &.open {
     animation: slide-down 0.4s ease-out;
@@ -82,6 +84,7 @@
 
 .accordion {
   position: relative;
+  z-index: 2;
 
   &--hide {
     display: none;
@@ -97,6 +100,7 @@
     cursor: pointer;
     @include rounded("normal");
     @include shadow();
+    outline: none;
 
     &.open{
       color: $color-background-dark;
